@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "file_kind": "restricted_health_vault",
+    "note": "虚构受限健康资料：与公开赛事数据物理分文件存放，仅供赛事医疗官在 phi 授权下读取，每次读取留痕。切勿放入公开视图。"
+  },
+  "records": [
+    {
+      "bib": "RUN-0417",
+      "name": "张立（虚构）",
+      "id_number": "350200199001010011",
+      "phone": "13900000417",
+      "birth_date": "1990-03-12",
+      "conditions": ["运动诱发心律失常（虚构）"],
+      "medications": ["美托洛尔（虚构用药）"],
+      "emergency_contact": { "name": "张梅（虚构）", "phone": "13900000418" },
+      "health_note": "近半年训练日志提示静息心率偏低（虚构）"
+    },
+    {
+      "bib": "WALK-0203",
+      "name": "王兰（虚构）",
+      "id_number": "350200196205050022",
+      "phone": "13900000203",
+      "birth_date": "1962-05-05",
+      "conditions": ["冠心病术后（虚构）", "高血压（虚构）"],
+      "medications": ["阿司匹林（虚构用药）", "氨氯地平（虚构用药）"],
+      "emergency_contact": { "name": "王强（虚构）", "phone": "13900000204" },
+      "health_note": "随身自备硝酸甘油（虚构）"
+    },
+    {
+      "bib": "BALL-0088",
+      "name": "陈小树（虚构）",
+      "id_number": "350200201107070033",
+      "phone": "13900000088",
+      "birth_date": "2011-07-07",
+      "conditions": ["运动性哮喘（虚构）"],
+      "medications": ["沙丁胺醇吸入剂（虚构用药）"],
+      "emergency_contact": { "name": "陈芳（虚构）", "phone": "13900000089" },
+      "health_note": "对青霉素过敏（虚构）"
+    }
+  ]
+}

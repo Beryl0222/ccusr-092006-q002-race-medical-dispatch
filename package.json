@@ -1,10 +1,12 @@
 {
   "name": "race-medical-dispatch",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
-  "description": "群众赛事医疗资源编排领域资料",
+  "description": "群众赛事医疗资源编排服务：签署生效、按时刻响应查询、局部重排、突发抢占补位、通知幂等与健康资料隔离",
   "scripts": {
-    "test": "node --test"
+    "test": "node --test",
+    "drill": "node src/drill.js",
+    "serve": "node src/server.js"
   }
 }

@@ -1,0 +1,322 @@
+{
+  "meta": {
+    "scenario": "2026-10-04 滨江体育公园周末三场群众体育活动同发",
+    "note": "全部为虚构资料；坐标、机构、人员均不对应真实对象",
+    "timezone": "+08:00"
+  },
+  "data_versions": {
+    "organizer": "organizer-2026-09-28-r4",
+    "ems_station": "ems-2026-09-30-r2",
+    "hospital": "hospital-2026-09-29-r1",
+    "volunteer": "volunteer-2026-10-01-r3"
+  },
+  "regulations": [
+    {
+      "version": "QSM-2024-C",
+      "effective_from": "2024-06-01T00:00:00+08:00",
+      "effective_to": "2026-09-01T00:00:00+08:00",
+      "rules": {
+        "min_qual_by_risk": { "low": "first_aid", "medium": "first_aid", "high": "first_aid_cert" },
+        "response_minutes": { "low": 15, "medium": 12, "high": 8 },
+        "aed_within_m": { "low": 1000, "medium": 800, "high": 500 },
+        "transport_minutes": { "low": 30, "medium": 25, "high": 20 },
+        "transport_required": { "low": false, "medium": true, "high": true }
+      }
+    },
+    {
+      "version": "QSM-2026-B",
+      "effective_from": "2026-09-01T00:00:00+08:00",
+      "effective_to": null,
+      "rules": {
+        "min_qual_by_risk": { "low": "first_aid", "medium": "first_aid_cert", "high": "emt" },
+        "response_minutes": { "low": 12, "medium": 8, "high": 5 },
+        "aed_within_m": { "low": 800, "medium": 500, "high": 300 },
+        "transport_minutes": { "low": 25, "medium": 20, "high": 15 },
+        "transport_required": { "low": false, "medium": true, "high": true }
+      }
+    }
+  ],
+  "capability_matrix": {
+    "road_run": ["cardiac", "trauma"],
+    "youth_ball": ["pediatric", "trauma"],
+    "elderly_walk": ["geriatric", "cardiac"]
+  },
+  "events": [
+    {
+      "event_id": "E_RUN",
+      "name": "滨江十公里路跑",
+      "group": "road_run",
+      "maintained_by": "organizer",
+      "buildup_window": { "start": "2026-10-04T06:30:00+08:00", "end": "2026-10-04T08:00:00+08:00" },
+      "window": { "start": "2026-10-04T08:00:00+08:00", "end": "2026-10-04T11:00:00+08:00" },
+      "teardown_window": { "start": "2026-10-04T11:00:00+08:00", "end": "2026-10-04T12:00:00+08:00" },
+      "participants": { "registered": 2200, "profile": "成人路跑爱好者，含少量竞速选手" },
+      "aid_stations": [
+        { "station_id": "AID_RUN_S", "name": "起点完赛区补给点", "at": [118.1002, 24.4602], "supplies": ["水", "电解质", "喷淋"], "window": { "start": "2026-10-04T07:30:00+08:00", "end": "2026-10-04T11:30:00+08:00" } },
+        { "station_id": "AID_RUN_5", "name": "5公里补给点", "at": [118.114, 24.466], "supplies": ["水", "电解质", "冰袋"], "window": { "start": "2026-10-04T07:50:00+08:00", "end": "2026-10-04T10:40:00+08:00" } }
+      ],
+      "risk_assessment": "起终点人群密集、冲刺心搏骤停风险；折返点与长坡为热射病高发段",
+      "positions": [
+        {
+          "position_id": "P_RUN_START",
+          "name": "路响起终点（滨江广场）",
+          "at": [118.1, 24.46],
+          "risk": "high",
+          "window": { "start": "2026-10-04T07:50:00+08:00", "end": "2026-10-04T11:10:00+08:00" }
+        },
+        {
+          "position_id": "P_RUN_KM5",
+          "name": "路跑5公里补给点",
+          "at": [118.114, 24.466],
+          "risk": "medium",
+          "window": { "start": "2026-10-04T08:00:00+08:00", "end": "2026-10-04T10:40:00+08:00" }
+        },
+        {
+          "position_id": "P_RUN_KM10",
+          "name": "路跑折返点（10公里）",
+          "at": [118.129, 24.47],
+          "risk": "medium",
+          "window": { "start": "2026-10-04T08:20:00+08:00", "end": "2026-10-04T10:10:00+08:00" }
+        }
+      ]
+    },
+    {
+      "event_id": "E_FIELD",
+      "name": "周末青少年足球邀请赛",
+      "group": "youth_ball",
+      "maintained_by": "organizer",
+      "buildup_window": { "start": "2026-10-04T07:00:00+08:00", "end": "2026-10-04T08:30:00+08:00" },
+      "window": { "start": "2026-10-04T08:30:00+08:00", "end": "2026-10-04T11:00:00+08:00" },
+      "teardown_window": { "start": "2026-10-04T11:00:00+08:00", "end": "2026-10-04T11:45:00+08:00" },
+      "participants": { "registered": 180, "profile": "10-15岁青少年，随队家长约400人" },
+      "aid_stations": [
+        { "station_id": "AID_FIELD", "name": "球场边医疗点", "at": [118.1032, 24.4712], "supplies": ["冰袋", "包扎", "颈托"], "window": { "start": "2026-10-04T08:00:00+08:00", "end": "2026-10-04T11:20:00+08:00" } }
+      ],
+      "risk_assessment": "扭伤、撞击伤、中暑；需儿科创伤交接能力",
+      "positions": [
+        {
+          "position_id": "P_FIELD_1",
+          "name": "一号球场边线医疗点",
+          "at": [118.103, 24.471],
+          "risk": "medium",
+          "window": { "start": "2026-10-04T08:20:00+08:00", "end": "2026-10-04T11:10:00+08:00" }
+        }
+      ]
+    },
+    {
+      "event_id": "E_WALK",
+      "name": "重阳老年健步走",
+      "group": "elderly_walk",
+      "maintained_by": "organizer",
+      "buildup_window": { "start": "2026-10-04T07:30:00+08:00", "end": "2026-10-04T08:50:00+08:00" },
+      "window": { "start": "2026-10-04T09:00:00+08:00", "end": "2026-10-04T10:30:00+08:00" },
+      "teardown_window": { "start": "2026-10-04T10:30:00+08:00", "end": "2026-10-04T11:15:00+08:00" },
+      "participants": { "registered": 650, "profile": "60岁以上为主，慢病比例较高" },
+      "aid_stations": [
+        { "station_id": "AID_WALK", "name": "步道服务亭补给点", "at": [118.091, 24.466], "supplies": ["水", "点心", "座椅", "血压计"], "window": { "start": "2026-10-04T08:20:00+08:00", "end": "2026-10-04T10:50:00+08:00" } }
+      ],
+      "risk_assessment": "心脑血管事件、跌倒；需老年/心脏交接能力，节奏慢、路线短",
+      "positions": [
+        {
+          "position_id": "P_WALK_PARK",
+          "name": "滨海步道中点",
+          "at": [118.091, 24.466],
+          "risk": "low",
+          "window": { "start": "2026-10-04T08:20:00+08:00", "end": "2026-10-04T10:40:00+08:00" }
+        },
+        {
+          "position_id": "P_WALK_END",
+          "name": "健步走终点（南门）",
+          "at": [118.096, 24.456],
+          "risk": "low",
+          "window": { "start": "2026-10-04T08:50:00+08:00", "end": "2026-10-04T11:10:00+08:00" }
+        }
+      ]
+    }
+  ],
+  "teams": [
+    {
+      "team_id": "T_EMS_1",
+      "name": "市急救中心直属一站1车组",
+      "maintained_by": "ems_station",
+      "qual_level": "emt",
+      "at": [118.105, 24.463],
+      "speed_kmh": 40,
+      "credentials": [
+        { "type": "急救中心岗位授权", "credential_number": "EMS-1-REAL-0001", "issued": "2025-12-01T00:00:00+08:00", "expires": "2027-11-30T00:00:00+08:00" }
+      ]
+    },
+    {
+      "team_id": "T_EMS_2",
+      "name": "市急救中心直属二站2车组",
+      "maintained_by": "ems_station",
+      "qual_level": "emt",
+      "at": [118.118, 24.469],
+      "speed_kmh": 40,
+      "credentials": [
+        { "type": "急救中心岗位授权", "credential_number": "EMS-2-REAL-0002", "issued": "2025-12-01T00:00:00+08:00", "expires": "2027-11-30T00:00:00+08:00" }
+      ]
+    },
+    {
+      "team_id": "T_EMS_3",
+      "name": "市急救中心西区分站3车组",
+      "maintained_by": "ems_station",
+      "qual_level": "emt",
+      "at": [118.088, 24.462],
+      "speed_kmh": 40,
+      "credentials": [
+        { "type": "急救中心岗位授权", "credential_number": "EMS-3-REAL-0003", "issued": "2026-04-01T00:00:00+08:00", "expires": "2028-03-31T00:00:00+08:00" }
+      ]
+    },
+    {
+      "team_id": "T_VOL_A",
+      "name": "蓝天志愿救援队滨江小队",
+      "maintained_by": "volunteer",
+      "qual_level": "first_aid_cert",
+      "at": [118.099, 24.461],
+      "speed_kmh": 30,
+      "credentials": [
+        { "type": "红十字救护员证", "credential_number": "RCS-A-REAL-0101", "issued": "2025-03-01T00:00:00+08:00", "expires": "2028-02-28T00:00:00+08:00" }
+      ]
+    },
+    {
+      "team_id": "T_VOL_B",
+      "name": "红十字志愿救援队江滩小队",
+      "maintained_by": "volunteer",
+      "qual_level": "first_aid_cert",
+      "at": [118.112, 24.469],
+      "speed_kmh": 30,
+      "credentials": [
+        { "type": "红十字救护员证", "credential_number": "RCS-B-REAL-0202", "issued": "2024-10-01T00:00:00+08:00", "expires": "2027-09-30T00:00:00+08:00" }
+      ]
+    },
+    {
+      "team_id": "T_STANDBY",
+      "name": "社区健康守门人志愿队",
+      "maintained_by": "volunteer",
+      "qual_level": "first_aid_cert",
+      "at": [118.087, 24.46],
+      "speed_kmh": 30,
+      "credentials": [
+        { "type": "红十字救护员证", "credential_number": "RCS-S-REAL-0303", "issued": "2025-06-01T00:00:00+08:00", "expires": "2028-05-31T00:00:00+08:00" }
+      ]
+    },
+    {
+      "team_id": "T_TRAIL",
+      "name": "山地救援志愿队步道驻点",
+      "maintained_by": "volunteer",
+      "qual_level": "first_aid_cert",
+      "at": [118.085, 24.47],
+      "speed_kmh": 30,
+      "credentials": [
+        { "type": "红十字救护员证", "credential_number": "RCS-T-REAL-0404", "issued": "2025-01-15T00:00:00+08:00", "expires": "2027-12-31T00:00:00+08:00" }
+      ]
+    },
+    {
+      "team_id": "T_VOL_C",
+      "name": "跑团急救兔志愿队",
+      "maintained_by": "volunteer",
+      "qual_level": "first_aid",
+      "at": [118.127, 24.471],
+      "speed_kmh": 30,
+      "credentials": [
+        { "type": "初级急救普及证", "credential_number": "FA-C-REAL-0505", "issued": "2026-01-10T00:00:00+08:00", "expires": "2026-12-31T00:00:00+08:00" }
+      ]
+    },
+    {
+      "team_id": "T_VOL_D",
+      "name": "城南机动志愿救援队",
+      "maintained_by": "volunteer",
+      "qual_level": "first_aid_cert",
+      "at": [118.114, 24.447],
+      "speed_kmh": 30,
+      "credentials": [
+        { "type": "红十字救护员证", "credential_number": "RCS-D-REAL-0606", "issued": "2025-09-01T00:00:00+08:00", "expires": "2028-08-31T00:00:00+08:00" }
+      ]
+    }
+  ],
+  "devices": [
+    { "device_id": "AED_01", "name": "急救一站站内AED", "kind": "AED", "maintained_by": "ems_station", "status": "ready", "at": [118.102, 24.4612], "battery_expires": "2028-03-01T00:00:00+08:00", "pad_expires": "2027-09-15T00:00:00+08:00" },
+    { "device_id": "AED_02", "name": "急救二站站内AED", "kind": "AED", "maintained_by": "ems_station", "status": "ready", "at": [118.118, 24.469], "battery_expires": "2027-12-01T00:00:00+08:00", "pad_expires": "2027-08-20T00:00:00+08:00" },
+    { "device_id": "AED_03", "name": "起点志愿者棚AED", "kind": "AED", "maintained_by": "volunteer", "status": "ready", "at": [118.099, 24.461], "battery_expires": "2028-01-10T00:00:00+08:00", "pad_expires": "2027-11-01T00:00:00+08:00" },
+    { "device_id": "AED_04", "name": "江滩志愿驻点AED", "kind": "AED", "maintained_by": "volunteer", "status": "ready", "at": [118.112, 24.469], "battery_expires": "2027-10-01T00:00:00+08:00", "pad_expires": "2027-07-07T00:00:00+08:00" },
+    { "device_id": "AED_05", "name": "折返点AED", "kind": "AED", "maintained_by": "volunteer", "status": "ready", "at": [118.129, 24.47], "battery_expires": "2028-05-01T00:00:00+08:00", "pad_expires": "2028-04-01T00:00:00+08:00" },
+    { "device_id": "AED_06", "name": "一号球场AED", "kind": "AED", "maintained_by": "organizer", "status": "ready", "at": [118.103, 24.471], "battery_expires": "2027-11-20T00:00:00+08:00", "pad_expires": "2027-10-10T00:00:00+08:00" },
+    { "device_id": "AED_07", "name": "步道服务亭AED", "kind": "AED", "maintained_by": "volunteer", "status": "ready", "at": [118.091, 24.466], "battery_expires": "2028-02-01T00:00:00+08:00", "pad_expires": "2027-12-15T00:00:00+08:00" },
+    { "device_id": "AED_08", "name": "南门终点AED", "kind": "AED", "maintained_by": "organizer", "status": "ready", "at": [118.096, 24.456], "battery_expires": "2027-09-30T00:00:00+08:00", "pad_expires": "2027-06-30T00:00:00+08:00" },
+    { "device_id": "AED_09", "name": "5公里补给点备用AED", "kind": "AED", "maintained_by": "organizer", "status": "ready", "at": [118.1145, 24.4655], "battery_expires": "2028-06-01T00:00:00+08:00", "pad_expires": "2028-03-01T00:00:00+08:00" },
+    { "device_id": "AED_10", "name": "南门服务点备用AED", "kind": "AED", "maintained_by": "volunteer", "status": "ready", "at": [118.094, 24.4585], "battery_expires": "2028-04-15T00:00:00+08:00", "pad_expires": "2028-01-20T00:00:00+08:00" }
+  ],
+  "vehicles": [
+    { "vehicle_id": "AMB_1", "name": "救护车 闽急救01", "kind": "ambulance", "maintained_by": "ems_station", "status": "ready", "at": [118.105, 24.463], "speed_kmh": 50, "crew_qual": "emt" },
+    { "vehicle_id": "AMB_2", "name": "救护车 闽急救02", "kind": "ambulance", "maintained_by": "ems_station", "status": "ready", "at": [118.118, 24.469], "speed_kmh": 50, "crew_qual": "emt" },
+    { "vehicle_id": "AMB_3", "name": "救护车 闽急救03（西区备勤）", "kind": "ambulance", "maintained_by": "ems_station", "status": "ready", "at": [118.088, 24.462], "speed_kmh": 50, "crew_qual": "emt" },
+    { "vehicle_id": "GOLF_1", "name": "园区接驳车1号", "kind": "golf_cart", "maintained_by": "organizer", "status": "ready", "at": [118.113, 24.467], "speed_kmh": 25, "crew_qual": "first_aid_cert" },
+    { "vehicle_id": "GOLF_2", "name": "园区接驳车2号", "kind": "golf_cart", "maintained_by": "organizer", "status": "ready", "at": [118.09, 24.463], "speed_kmh": 25, "crew_qual": "first_aid_cert" },
+    { "vehicle_id": "GOLF_3", "name": "园区接驳车3号（南门）", "kind": "golf_cart", "maintained_by": "organizer", "status": "ready", "at": [118.097, 24.457], "speed_kmh": 25, "crew_qual": "first_aid_cert" },
+    { "vehicle_id": "GOLF_4", "name": "园区接驳车4号（步道）", "kind": "golf_cart", "maintained_by": "organizer", "status": "ready", "at": [118.092, 24.464], "speed_kmh": 25, "crew_qual": "first_aid_cert" }
+  ],
+  "hospitals": [
+    {
+      "hospital_id": "H_CITY",
+      "name": "市第一医院急诊医学中心（虚构）",
+      "maintained_by": "hospital",
+      "at": [118.138, 24.478],
+      "capabilities": ["cardiac", "trauma", "pediatric", "geriatric"],
+      "emergency_window": { "start": "2026-10-04T00:00:00+08:00", "end": "2026-10-04T23:59:00+08:00" },
+      "handoff": { "green_channel": true, "radio": "UHF-7", "registry": "no_real_registry" }
+    },
+    {
+      "hospital_id": "H_CHILDREN",
+      "name": "市儿童医院急诊（虚构）",
+      "maintained_by": "hospital",
+      "at": [118.14, 24.458],
+      "capabilities": ["pediatric", "trauma"],
+      "emergency_window": { "start": "2026-10-04T00:00:00+08:00", "end": "2026-10-04T23:59:00+08:00" },
+      "handoff": { "green_channel": true, "radio": "UHF-9", "registry": "no_real_registry" }
+    },
+    {
+      "hospital_id": "H_GERI",
+      "name": "市老年病医院急诊（虚构）",
+      "maintained_by": "hospital",
+      "at": [118.07, 24.45],
+      "capabilities": ["geriatric", "cardiac"],
+      "emergency_window": { "start": "2026-10-04T06:00:00+08:00", "end": "2026-10-04T22:00:00+08:00" },
+      "handoff": { "green_channel": true, "radio": "UHF-11", "registry": "no_real_registry" }
+    }
+  ],
+  "corridors": [
+    { "corridor_id": "C_RUN_CITY", "name": "滨江路—杏林大桥—市第一医院", "maintained_by": "ems_station", "status": "open", "serves_positions": ["P_RUN_START", "P_RUN_KM5"], "to_hospital_id": "H_CITY", "minutes": 12 },
+    { "corridor_id": "C_KM10_CITY", "name": "折返点专用通道—市第一医院", "maintained_by": "ems_station", "status": "open", "serves_positions": ["P_RUN_KM10"], "to_hospital_id": "H_CITY", "minutes": 8 },
+    { "corridor_id": "C_FIELD_CHILD", "name": "体育路—市儿童医院", "maintained_by": "ems_station", "status": "open", "serves_positions": ["P_FIELD_1"], "to_hospital_id": "H_CHILDREN", "minutes": 10 },
+    { "corridor_id": "C_FIELD_CITY", "name": "体育路—环岛高架—市第一医院", "maintained_by": "ems_station", "status": "open", "serves_positions": ["P_FIELD_1"], "to_hospital_id": "H_CITY", "minutes": 15 },
+    { "corridor_id": "C_WALK_GERI", "name": "滨海慢行道—老年病医院", "maintained_by": "ems_station", "status": "open", "serves_positions": ["P_WALK_PARK", "P_WALK_END"], "to_hospital_id": "H_GERI", "minutes": 11 },
+    { "corridor_id": "C_WALK_CITY", "name": "南门—成功大道—市第一医院（备用）", "maintained_by": "ems_station", "status": "open", "serves_positions": ["P_WALK_PARK", "P_WALK_END"], "to_hospital_id": "H_CITY", "minutes": 18 }
+  ],
+  "signers": [
+    {
+      "signer_id": "S_LIN",
+      "name": "林安全（虚构）",
+      "title": "赛事安全负责人",
+      "authorities": ["medical_plan"],
+      "authority_from": "2026-01-01T00:00:00+08:00",
+      "authority_to": null
+    },
+    {
+      "signer_id": "S_HE",
+      "name": "何统筹（虚构）",
+      "title": "活动统筹（无医疗方案签署权）",
+      "authorities": ["logistics"],
+      "authority_from": "2026-01-01T00:00:00+08:00",
+      "authority_to": null
+    },
+    {
+      "signer_id": "S_RET",
+      "name": "任安全（虚构）",
+      "title": "前任安全负责人（授权已过期）",
+      "authorities": ["medical_plan"],
+      "authority_from": "2023-01-01T00:00:00+08:00",
+      "authority_to": "2026-06-30T00:00:00+08:00"
+    }
+  ]
+}
