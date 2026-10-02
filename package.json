@@ -1,10 +1,17 @@
 {
   "name": "race-medical-dispatch",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
-  "description": "群众赛事医疗资源编排领域资料",
+  "description": "群众赛事医疗资源编排服务：点位响应者/除颤设备/转运路线的即时接手、局部重排与冲突解释",
   "scripts": {
-    "test": "node --test"
+    "test": "node --test",
+    "serve": "node src/cli.js serve --scenario data/scenario.json",
+    "drill": "node src/cli.js drill data/scenario.json",
+    "replay": "node src/cli.js replay data/scenario.json",
+    "admin": "node src/cli.js admin data/scenario.json"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }

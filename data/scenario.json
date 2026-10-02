@@ -1,0 +1,1403 @@
+{
+  "meta": {
+    "title": "2026-10-10 周六 路跑 / 青少年球赛 / 老年健步 同发医疗保障演练（全虚构）",
+    "norm_id": "norm-2026-h2",
+    "note": "所有人员、机构、伤情均为虚构；真实个人健康资料不得出现在本文件中。"
+  },
+  "commands": [
+    {
+      "command_id": "cmd-decl-hospital-1",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:00:00+08:00",
+      "actor": {
+        "org": "hospital",
+        "name": "市一医院联络人（虚构）"
+      },
+      "resource": {
+        "id": "H_MAIN",
+        "kind": "facility",
+        "owner_org": "hospital",
+        "label": "市一人民医院（虚构）",
+        "capabilities": [
+          "CARDIAC",
+          "GREEN_CHANNEL",
+          "TRAUMA"
+        ],
+        "window": {
+          "start": "2026-10-10T06:00:00+08:00",
+          "end": "2026-10-10T18:00:00+08:00"
+        }
+      }
+    },
+    {
+      "command_id": "cmd-decl-hospital-2",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:01:00+08:00",
+      "actor": {
+        "org": "hospital",
+        "name": "骨科医院联络人（虚构）"
+      },
+      "resource": {
+        "id": "H_TRAUMA",
+        "kind": "facility",
+        "owner_org": "hospital",
+        "label": "市创伤骨科医院（虚构）",
+        "capabilities": [
+          "TRAUMA",
+          "GREEN_CHANNEL"
+        ],
+        "window": {
+          "start": "2026-10-10T06:00:00+08:00",
+          "end": "2026-10-10T18:00:00+08:00"
+        }
+      }
+    },
+    {
+      "command_id": "cmd-decl-hospital-3",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:02:00+08:00",
+      "actor": {
+        "org": "hospital",
+        "name": "老年医院联络人（虚构）"
+      },
+      "resource": {
+        "id": "H_GERI",
+        "kind": "facility",
+        "owner_org": "hospital",
+        "label": "市老年医院担架接诊点（虚构）",
+        "capabilities": [
+          "STRETCHER_BAY"
+        ],
+        "window": {
+          "start": "2026-10-10T06:00:00+08:00",
+          "end": "2026-10-10T14:00:00+08:00"
+        }
+      }
+    },
+    {
+      "command_id": "cmd-decl-vehicle-1",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:03:00+08:00",
+      "actor": {
+        "org": "station",
+        "name": "急救站车辆调度（虚构）"
+      },
+      "resource": {
+        "id": "V1",
+        "kind": "vehicle",
+        "owner_org": "station",
+        "label": "救护车 1（虚构）",
+        "type": "ambulance",
+        "ref": "VP"
+      }
+    },
+    {
+      "command_id": "cmd-decl-vehicle-2",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:04:00+08:00",
+      "actor": {
+        "org": "station",
+        "name": "急救站车辆调度（虚构）"
+      },
+      "resource": {
+        "id": "V2",
+        "kind": "vehicle",
+        "owner_org": "station",
+        "label": "救护车 2（虚构）",
+        "type": "ambulance",
+        "ref": "VP"
+      }
+    },
+    {
+      "command_id": "cmd-decl-vehicle-3",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:05:00+08:00",
+      "actor": {
+        "org": "hospital",
+        "name": "老年医院车管（虚构）"
+      },
+      "resource": {
+        "id": "V3",
+        "kind": "vehicle",
+        "owner_org": "hospital",
+        "label": "担架型救护车 3（虚构）",
+        "type": "stretcher_ambulance",
+        "ref": "VP"
+      }
+    },
+    {
+      "command_id": "cmd-decl-team-param",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:06:00+08:00",
+      "actor": {
+        "org": "station",
+        "name": "急救站排班（虚构）"
+      },
+      "resource": {
+        "id": "T_PARAM",
+        "kind": "team",
+        "owner_org": "station",
+        "label": "急救站重症组（虚构）",
+        "ref": "ST",
+        "members": [
+          {
+            "member_id": "m-p1",
+            "cert": "PARAMEDIC",
+            "expires_at": "2027-12-31T00:00:00+08:00"
+          },
+          {
+            "member_id": "m-p2",
+            "cert": "PARAMEDIC",
+            "expires_at": "2027-12-31T00:00:00+08:00"
+          }
+        ]
+      }
+    },
+    {
+      "command_id": "cmd-decl-team-param-s",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:07:00+08:00",
+      "actor": {
+        "org": "station",
+        "name": "急救站排班（虚构）"
+      },
+      "resource": {
+        "id": "T_PARAM_S",
+        "kind": "team",
+        "owner_org": "station",
+        "label": "待命重症组（虚构）",
+        "ref": "tent",
+        "members": [
+          {
+            "member_id": "m-ps1",
+            "cert": "PARAMEDIC",
+            "expires_at": "2027-12-31T00:00:00+08:00"
+          },
+          {
+            "member_id": "m-ps2",
+            "cert": "PARAMEDIC",
+            "expires_at": "2027-12-31T00:00:00+08:00"
+          }
+        ]
+      }
+    },
+    {
+      "command_id": "cmd-decl-team-emt1",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:08:00+08:00",
+      "actor": {
+        "org": "station",
+        "name": "急救站排班（虚构）"
+      },
+      "resource": {
+        "id": "T_EMT1",
+        "kind": "team",
+        "owner_org": "station",
+        "label": "10 公里组急救队（虚构）",
+        "ref": "ST",
+        "members": [
+          {
+            "member_id": "m-e1a",
+            "cert": "EMT",
+            "expires_at": "2027-12-31T00:00:00+08:00"
+          },
+          {
+            "member_id": "m-e1b",
+            "cert": "EMT",
+            "expires_at": "2027-12-31T00:00:00+08:00"
+          }
+        ]
+      }
+    },
+    {
+      "command_id": "cmd-decl-team-emtr2",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:09:00+08:00",
+      "actor": {
+        "org": "station",
+        "name": "急救站排班（虚构）"
+      },
+      "resource": {
+        "id": "T_EMT_R2",
+        "kind": "team",
+        "owner_org": "station",
+        "label": "机动急救组 R2（虚构）",
+        "ref": "ST",
+        "members": [
+          {
+            "member_id": "m-er2a",
+            "cert": "EMT",
+            "expires_at": "2027-12-31T00:00:00+08:00"
+          },
+          {
+            "member_id": "m-er2b",
+            "cert": "EMT",
+            "expires_at": "2027-12-31T00:00:00+08:00"
+          }
+        ]
+      }
+    },
+    {
+      "command_id": "cmd-decl-team-emts",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:10:00+08:00",
+      "actor": {
+        "org": "station",
+        "name": "急救站排班（虚构）"
+      },
+      "resource": {
+        "id": "T_EMT_S",
+        "kind": "team",
+        "owner_org": "station",
+        "label": "入口值守急救组（虚构）",
+        "ref": "gate",
+        "members": [
+          {
+            "member_id": "m-es1",
+            "cert": "EMT",
+            "expires_at": "2027-12-31T00:00:00+08:00"
+          },
+          {
+            "member_id": "m-es2",
+            "cert": "FIRST_AID",
+            "expires_at": "2027-12-31T00:00:00+08:00"
+          }
+        ]
+      }
+    },
+    {
+      "command_id": "cmd-decl-team-ball",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:11:00+08:00",
+      "actor": {
+        "org": "volunteer",
+        "name": "志愿团队负责人（虚构）"
+      },
+      "resource": {
+        "id": "T_FA_BALL",
+        "kind": "team",
+        "owner_org": "volunteer",
+        "label": "球场志愿救护队（虚构）",
+        "ref": "court",
+        "members": [
+          {
+            "member_id": "m-b1",
+            "cert": "FIRST_AID",
+            "expires_at": "2027-12-31T00:00:00+08:00"
+          },
+          {
+            "member_id": "m-b2",
+            "cert": "FIRST_AID",
+            "expires_at": "2027-12-31T00:00:00+08:00"
+          }
+        ]
+      }
+    },
+    {
+      "command_id": "cmd-decl-team-walk",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:12:00+08:00",
+      "actor": {
+        "org": "volunteer",
+        "name": "志愿团队负责人（虚构）"
+      },
+      "resource": {
+        "id": "T_FA_WALK",
+        "kind": "team",
+        "owner_org": "volunteer",
+        "label": "健步志愿救护队（虚构）",
+        "ref": "walk",
+        "members": [
+          {
+            "member_id": "m-w1",
+            "cert": "FIRST_AID",
+            "expires_at": "2027-12-31T00:00:00+08:00"
+          },
+          {
+            "member_id": "m-w2",
+            "cert": "FIRST_AID",
+            "expires_at": "2027-12-31T00:00:00+08:00"
+          }
+        ]
+      }
+    },
+    {
+      "command_id": "cmd-decl-team-res1",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:13:00+08:00",
+      "actor": {
+        "org": "volunteer",
+        "name": "志愿团队负责人（虚构）"
+      },
+      "resource": {
+        "id": "T_RES1",
+        "kind": "team",
+        "owner_org": "volunteer",
+        "label": "志愿补位组 1（虚构）",
+        "ref": "ST",
+        "members": [
+          {
+            "member_id": "m-r1a",
+            "cert": "FIRST_AID",
+            "expires_at": "2027-12-31T00:00:00+08:00"
+          },
+          {
+            "member_id": "m-r1b",
+            "cert": "FIRST_AID",
+            "expires_at": "2027-12-31T00:00:00+08:00"
+          }
+        ]
+      }
+    },
+    {
+      "command_id": "cmd-decl-team-res2",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:14:00+08:00",
+      "actor": {
+        "org": "volunteer",
+        "name": "志愿团队负责人（虚构）"
+      },
+      "resource": {
+        "id": "T_RES2",
+        "kind": "team",
+        "owner_org": "volunteer",
+        "label": "志愿补位组 2（虚构）",
+        "ref": "ST",
+        "members": [
+          {
+            "member_id": "m-r2a",
+            "cert": "FIRST_AID",
+            "expires_at": "2027-12-31T00:00:00+08:00"
+          },
+          {
+            "member_id": "m-r2b",
+            "cert": "FIRST_AID",
+            "expires_at": "2027-12-31T00:00:00+08:00"
+          }
+        ]
+      }
+    },
+    {
+      "command_id": "cmd-decl-aed-1",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:15:00+08:00",
+      "actor": {
+        "org": "station",
+        "name": "急救站设备管理员（虚构）"
+      },
+      "resource": {
+        "id": "A1",
+        "kind": "aed",
+        "owner_org": "station",
+        "label": "5 公里点 AED（虚构）",
+        "status": "ready",
+        "ref": "run5k"
+      }
+    },
+    {
+      "command_id": "cmd-decl-aed-2",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:16:00+08:00",
+      "actor": {
+        "org": "station",
+        "name": "急救站设备管理员（虚构）"
+      },
+      "resource": {
+        "id": "A2",
+        "kind": "aed",
+        "owner_org": "station",
+        "label": "10 公里点 AED（虚构）",
+        "status": "ready",
+        "ref": "run10k"
+      }
+    },
+    {
+      "command_id": "cmd-decl-aed-3",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:17:00+08:00",
+      "actor": {
+        "org": "host",
+        "name": "主办方器材组（虚构）"
+      },
+      "resource": {
+        "id": "A3",
+        "kind": "aed",
+        "owner_org": "host",
+        "label": "球场边 AED（虚构）",
+        "status": "ready",
+        "ref": "court"
+      }
+    },
+    {
+      "command_id": "cmd-decl-aed-4",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:18:00+08:00",
+      "actor": {
+        "org": "host",
+        "name": "主办方器材组（虚构）"
+      },
+      "resource": {
+        "id": "A4",
+        "kind": "aed",
+        "owner_org": "host",
+        "label": "健步起点 AED（虚构）",
+        "status": "ready",
+        "ref": "walk"
+      }
+    },
+    {
+      "command_id": "cmd-decl-aed-5",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:19:00+08:00",
+      "actor": {
+        "org": "host",
+        "name": "主办方器材组（虚构）"
+      },
+      "resource": {
+        "id": "A5",
+        "kind": "aed",
+        "owner_org": "host",
+        "label": "入口 AED（虚构）",
+        "status": "ready",
+        "ref": "gate"
+      }
+    },
+    {
+      "command_id": "cmd-decl-aed-6",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:20:00+08:00",
+      "actor": {
+        "org": "host",
+        "name": "主办方器材组（虚构）"
+      },
+      "resource": {
+        "id": "A6",
+        "kind": "aed",
+        "owner_org": "host",
+        "label": "待命帐 AED（虚构）",
+        "status": "ready",
+        "ref": "tent"
+      }
+    },
+    {
+      "command_id": "cmd-decl-aed-spare",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:21:00+08:00",
+      "actor": {
+        "org": "station",
+        "name": "急救站设备管理员（虚构）"
+      },
+      "resource": {
+        "id": "A_SPARE",
+        "kind": "aed",
+        "owner_org": "station",
+        "label": "急救站备用 AED（虚构）",
+        "status": "ready",
+        "ref": "ST"
+      }
+    },
+    {
+      "command_id": "cmd-decl-route-run",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:22:00+08:00",
+      "actor": {
+        "org": "host",
+        "name": "主办方路线组（虚构）"
+      },
+      "resource": {
+        "id": "R_RUN",
+        "kind": "route",
+        "owner_org": "host",
+        "label": "滨江路转运线（虚构）",
+        "path": [
+          "run5k",
+          "j1",
+          "j2",
+          "H_MAIN"
+        ],
+        "allowed_injuries": [
+          "CARDIAC",
+          "TRAUMA",
+          "HEATSTROKE",
+          "PEDIATRIC",
+          "SENIOR_FALL"
+        ]
+      }
+    },
+    {
+      "command_id": "cmd-decl-route-run-b",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:23:00+08:00",
+      "actor": {
+        "org": "host",
+        "name": "主办方路线组（虚构）"
+      },
+      "resource": {
+        "id": "R_RUN_B",
+        "kind": "route",
+        "owner_org": "host",
+        "label": "环城桥备用转运线（虚构）",
+        "path": [
+          "run5k",
+          "b1",
+          "b2",
+          "H_MAIN"
+        ],
+        "allowed_injuries": [
+          "CARDIAC",
+          "TRAUMA",
+          "HEATSTROKE",
+          "PEDIATRIC",
+          "SENIOR_FALL"
+        ]
+      }
+    },
+    {
+      "command_id": "cmd-decl-route-run10k",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:24:00+08:00",
+      "actor": {
+        "org": "host",
+        "name": "主办方路线组（虚构）"
+      },
+      "resource": {
+        "id": "R_RUN_10K",
+        "kind": "route",
+        "owner_org": "host",
+        "label": "10 公里点接驳转运线（虚构）",
+        "path": [
+          "run10k",
+          "run5k",
+          "b1",
+          "b2",
+          "H_MAIN"
+        ],
+        "allowed_injuries": [
+          "HEATSTROKE",
+          "TRAUMA",
+          "CARDIAC"
+        ]
+      }
+    },
+    {
+      "command_id": "cmd-decl-route-ball",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:25:00+08:00",
+      "actor": {
+        "org": "host",
+        "name": "主办方路线组（虚构）"
+      },
+      "resource": {
+        "id": "R_BALL",
+        "kind": "route",
+        "owner_org": "host",
+        "label": "球场转运线（虚构）",
+        "path": [
+          "court",
+          "c1",
+          "H_TRAUMA"
+        ],
+        "allowed_injuries": [
+          "TRAUMA",
+          "PEDIATRIC",
+          "CARDIAC"
+        ]
+      }
+    },
+    {
+      "command_id": "cmd-decl-route-walk",
+      "kind": "declare_resource",
+      "occurred_at": "2026-09-25T09:26:00+08:00",
+      "actor": {
+        "org": "host",
+        "name": "主办方路线组（虚构）"
+      },
+      "resource": {
+        "id": "R_WALK",
+        "kind": "route",
+        "owner_org": "host",
+        "label": "公园健步转运线（虚构）",
+        "path": [
+          "walk",
+          "w1",
+          "H_GERI"
+        ],
+        "allowed_injuries": [
+          "SENIOR_FALL",
+          "CARDIAC",
+          "HEATSTROKE"
+        ]
+      }
+    },
+    {
+      "command_id": "cmd-plan-v1-submit",
+      "kind": "submit_plan",
+      "occurred_at": "2026-09-26T10:00:00+08:00",
+      "actor": {
+        "org": "host",
+        "name": "主办方赛事经理（虚构）"
+      },
+      "plan": {
+        "plan_id": "PLAN-20261010-v1",
+        "norm_id": "norm-2026-h1",
+        "activities": [
+          {
+            "id": "ACT_RUN",
+            "type": "road_run",
+            "label": "滨江十公里路跑（虚构）",
+            "region": "riverside",
+            "audience": "成人跑者",
+            "window": {
+              "start": "2026-10-10T07:30:00+08:00",
+              "end": "2026-10-10T10:30:00+08:00"
+            }
+          },
+          {
+            "id": "ACT_BALL",
+            "type": "youth_ball",
+            "label": "青少年足球友谊赛（虚构）",
+            "region": "sports_center",
+            "audience": "12-15 岁青少年",
+            "window": {
+              "start": "2026-10-10T08:00:00+08:00",
+              "end": "2026-10-10T12:00:00+08:00"
+            }
+          },
+          {
+            "id": "ACT_WALK",
+            "type": "senior_walk",
+            "label": "老年公园健步走（虚构）",
+            "region": "park",
+            "audience": "60 岁以上长者",
+            "window": {
+              "start": "2026-10-10T08:00:00+08:00",
+              "end": "2026-10-10T10:00:00+08:00"
+            }
+          }
+        ],
+        "posts": [
+          {
+            "id": "P_RUN_5K",
+            "label": "路跑 5 公里医疗点",
+            "kind": "route_point",
+            "activity_id": "ACT_RUN",
+            "activity_type": "road_run",
+            "region": "riverside",
+            "ref": "run5k",
+            "risk": "HIGH",
+            "injury_focus": "CARDIAC",
+            "window": {
+              "start": "2026-10-10T07:20:00+08:00",
+              "end": "2026-10-10T10:30:00+08:00"
+            },
+            "preferred_team_id": "T_PARAM"
+          },
+          {
+            "id": "P_RUN_10K",
+            "label": "路跑 10 公里医疗点",
+            "kind": "route_point",
+            "activity_id": "ACT_RUN",
+            "activity_type": "road_run",
+            "region": "riverside",
+            "ref": "run10k",
+            "risk": "MEDIUM",
+            "injury_focus": "HEATSTROKE",
+            "window": {
+              "start": "2026-10-10T07:20:00+08:00",
+              "end": "2026-10-10T11:00:00+08:00"
+            },
+            "preferred_team_id": "T_EMT1"
+          },
+          {
+            "id": "P_BALL",
+            "label": "球场边医疗点",
+            "kind": "sideline",
+            "activity_id": "ACT_BALL",
+            "activity_type": "youth_ball",
+            "region": "sports_center",
+            "ref": "court",
+            "risk": "MEDIUM",
+            "injury_focus": "TRAUMA",
+            "window": {
+              "start": "2026-10-10T08:00:00+08:00",
+              "end": "2026-10-10T12:00:00+08:00"
+            },
+            "preferred_team_id": "T_FA_BALL"
+          },
+          {
+            "id": "P_WALK",
+            "label": "健步起点医疗点",
+            "kind": "aid",
+            "activity_id": "ACT_WALK",
+            "activity_type": "senior_walk",
+            "region": "park",
+            "ref": "walk",
+            "risk": "MEDIUM",
+            "injury_focus": "SENIOR_FALL",
+            "requires": {
+              "stretcher": true
+            },
+            "window": {
+              "start": "2026-10-10T08:00:00+08:00",
+              "end": "2026-10-10T10:00:00+08:00"
+            },
+            "preferred_team_id": "T_FA_WALK"
+          },
+          {
+            "id": "P_GATE",
+            "label": "体育中心入口值守点",
+            "kind": "standby",
+            "activity_id": "ACT_BALL",
+            "activity_type": "youth_ball",
+            "region": "sports_center",
+            "ref": "gate",
+            "risk": "LOW",
+            "injury_focus": "TRAUMA",
+            "window": {
+              "start": "2026-10-10T08:00:00+08:00",
+              "end": "2026-10-10T12:00:00+08:00"
+            },
+            "preferred_team_id": "T_EMT_S"
+          },
+          {
+            "id": "P_TENT",
+            "label": "指挥帐待命点",
+            "kind": "standby",
+            "activity_id": "ACT_RUN",
+            "activity_type": "road_run",
+            "region": "riverside",
+            "ref": "tent",
+            "risk": "LOW",
+            "injury_focus": "CARDIAC",
+            "window": {
+              "start": "2026-10-10T07:20:00+08:00",
+              "end": "2026-10-10T11:00:00+08:00"
+            },
+            "preferred_team_id": "T_PARAM_S"
+          }
+        ],
+        "setup": {
+          "start": "2026-10-10T06:40:00+08:00"
+        },
+        "teardown": {
+          "end": "2026-10-10T12:40:00+08:00"
+        },
+        "links": [
+          {
+            "a": "runstart",
+            "b": "run5k",
+            "minutes": 2
+          },
+          {
+            "a": "run5k",
+            "b": "run10k",
+            "minutes": 2
+          },
+          {
+            "a": "run10k",
+            "b": "runfinish",
+            "minutes": 2
+          },
+          {
+            "a": "run5k",
+            "b": "ST",
+            "minutes": 4
+          },
+          {
+            "a": "walk",
+            "b": "ST",
+            "minutes": 2
+          },
+          {
+            "a": "court",
+            "b": "ST",
+            "minutes": 3
+          },
+          {
+            "a": "gate",
+            "b": "court",
+            "minutes": 2
+          },
+          {
+            "a": "tent",
+            "b": "court",
+            "minutes": 6
+          },
+          {
+            "a": "VP",
+            "b": "run5k",
+            "minutes": 3
+          },
+          {
+            "a": "VP",
+            "b": "court",
+            "minutes": 4
+          },
+          {
+            "a": "VP",
+            "b": "walk",
+            "minutes": 3
+          },
+          {
+            "a": "run5k",
+            "b": "j1",
+            "minutes": 3
+          },
+          {
+            "a": "j1",
+            "b": "j2",
+            "minutes": 4
+          },
+          {
+            "a": "j2",
+            "b": "H_MAIN",
+            "minutes": 3
+          },
+          {
+            "a": "run5k",
+            "b": "b1",
+            "minutes": 4
+          },
+          {
+            "a": "b1",
+            "b": "b2",
+            "minutes": 4
+          },
+          {
+            "a": "b2",
+            "b": "H_MAIN",
+            "minutes": 3
+          },
+          {
+            "a": "court",
+            "b": "c1",
+            "minutes": 5
+          },
+          {
+            "a": "c1",
+            "b": "H_TRAUMA",
+            "minutes": 6
+          },
+          {
+            "a": "walk",
+            "b": "w1",
+            "minutes": 5
+          },
+          {
+            "a": "w1",
+            "b": "H_GERI",
+            "minutes": 6
+          }
+        ]
+      }
+    },
+    {
+      "command_id": "cmd-plan-v1-approve",
+      "kind": "approve_plan",
+      "occurred_at": "2026-09-27T10:00:00+08:00",
+      "plan_id": "PLAN-20261010-v1",
+      "signer": {
+        "role": "SAFETY_DIRECTOR",
+        "name": "赛事安全负责人（虚构）"
+      }
+    },
+    {
+      "command_id": "cmd-plan-v2-submit",
+      "kind": "submit_plan",
+      "occurred_at": "2026-09-28T09:00:00+08:00",
+      "actor": {
+        "org": "host",
+        "name": "主办方赛事经理（虚构）"
+      },
+      "plan": {
+        "plan_id": "PLAN-20261010-v2",
+        "norm_id": "norm-2026-h2",
+        "activities": [
+          {
+            "id": "ACT_RUN",
+            "type": "road_run",
+            "label": "滨江十公里路跑（虚构）",
+            "region": "riverside",
+            "audience": "成人跑者",
+            "window": {
+              "start": "2026-10-10T07:30:00+08:00",
+              "end": "2026-10-10T10:30:00+08:00"
+            }
+          },
+          {
+            "id": "ACT_BALL",
+            "type": "youth_ball",
+            "label": "青少年足球友谊赛（虚构）",
+            "region": "sports_center",
+            "audience": "12-15 岁青少年",
+            "window": {
+              "start": "2026-10-10T08:00:00+08:00",
+              "end": "2026-10-10T12:00:00+08:00"
+            }
+          },
+          {
+            "id": "ACT_WALK",
+            "type": "senior_walk",
+            "label": "老年公园健步走（虚构）",
+            "region": "park",
+            "audience": "60 岁以上长者",
+            "window": {
+              "start": "2026-10-10T08:00:00+08:00",
+              "end": "2026-10-10T10:00:00+08:00"
+            }
+          }
+        ],
+        "posts": [
+          {
+            "id": "P_RUN_5K",
+            "label": "路跑 5 公里医疗点",
+            "kind": "route_point",
+            "activity_id": "ACT_RUN",
+            "activity_type": "road_run",
+            "region": "riverside",
+            "ref": "run5k",
+            "risk": "HIGH",
+            "injury_focus": "CARDIAC",
+            "window": {
+              "start": "2026-10-10T07:20:00+08:00",
+              "end": "2026-10-10T10:30:00+08:00"
+            },
+            "preferred_team_id": "T_PARAM"
+          },
+          {
+            "id": "P_RUN_10K",
+            "label": "路跑 10 公里医疗点",
+            "kind": "route_point",
+            "activity_id": "ACT_RUN",
+            "activity_type": "road_run",
+            "region": "riverside",
+            "ref": "run10k",
+            "risk": "MEDIUM",
+            "injury_focus": "HEATSTROKE",
+            "window": {
+              "start": "2026-10-10T07:20:00+08:00",
+              "end": "2026-10-10T11:00:00+08:00"
+            },
+            "preferred_team_id": "T_EMT1"
+          },
+          {
+            "id": "P_BALL",
+            "label": "球场边医疗点",
+            "kind": "sideline",
+            "activity_id": "ACT_BALL",
+            "activity_type": "youth_ball",
+            "region": "sports_center",
+            "ref": "court",
+            "risk": "MEDIUM",
+            "injury_focus": "TRAUMA",
+            "window": {
+              "start": "2026-10-10T08:00:00+08:00",
+              "end": "2026-10-10T12:00:00+08:00"
+            },
+            "preferred_team_id": "T_FA_BALL"
+          },
+          {
+            "id": "P_WALK",
+            "label": "健步起点医疗点",
+            "kind": "aid",
+            "activity_id": "ACT_WALK",
+            "activity_type": "senior_walk",
+            "region": "park",
+            "ref": "walk",
+            "risk": "MEDIUM",
+            "injury_focus": "SENIOR_FALL",
+            "requires": {
+              "stretcher": true
+            },
+            "window": {
+              "start": "2026-10-10T08:00:00+08:00",
+              "end": "2026-10-10T10:00:00+08:00"
+            },
+            "preferred_team_id": "T_FA_WALK"
+          },
+          {
+            "id": "P_GATE",
+            "label": "体育中心入口值守点",
+            "kind": "standby",
+            "activity_id": "ACT_BALL",
+            "activity_type": "youth_ball",
+            "region": "sports_center",
+            "ref": "gate",
+            "risk": "LOW",
+            "injury_focus": "TRAUMA",
+            "window": {
+              "start": "2026-10-10T08:00:00+08:00",
+              "end": "2026-10-10T12:00:00+08:00"
+            },
+            "preferred_team_id": "T_EMT_S"
+          },
+          {
+            "id": "P_TENT",
+            "label": "指挥帐待命点",
+            "kind": "standby",
+            "activity_id": "ACT_RUN",
+            "activity_type": "road_run",
+            "region": "riverside",
+            "ref": "tent",
+            "risk": "LOW",
+            "injury_focus": "CARDIAC",
+            "window": {
+              "start": "2026-10-10T07:20:00+08:00",
+              "end": "2026-10-10T11:00:00+08:00"
+            },
+            "preferred_team_id": "T_PARAM_S"
+          }
+        ],
+        "setup": {
+          "start": "2026-10-10T06:40:00+08:00"
+        },
+        "teardown": {
+          "end": "2026-10-10T12:40:00+08:00"
+        },
+        "links": [
+          {
+            "a": "runstart",
+            "b": "run5k",
+            "minutes": 2
+          },
+          {
+            "a": "run5k",
+            "b": "run10k",
+            "minutes": 2
+          },
+          {
+            "a": "run10k",
+            "b": "runfinish",
+            "minutes": 2
+          },
+          {
+            "a": "run5k",
+            "b": "ST",
+            "minutes": 4
+          },
+          {
+            "a": "walk",
+            "b": "ST",
+            "minutes": 2
+          },
+          {
+            "a": "court",
+            "b": "ST",
+            "minutes": 3
+          },
+          {
+            "a": "gate",
+            "b": "court",
+            "minutes": 2
+          },
+          {
+            "a": "tent",
+            "b": "court",
+            "minutes": 6
+          },
+          {
+            "a": "VP",
+            "b": "run5k",
+            "minutes": 3
+          },
+          {
+            "a": "VP",
+            "b": "court",
+            "minutes": 4
+          },
+          {
+            "a": "VP",
+            "b": "walk",
+            "minutes": 3
+          },
+          {
+            "a": "run5k",
+            "b": "j1",
+            "minutes": 3
+          },
+          {
+            "a": "j1",
+            "b": "j2",
+            "minutes": 4
+          },
+          {
+            "a": "j2",
+            "b": "H_MAIN",
+            "minutes": 3
+          },
+          {
+            "a": "run5k",
+            "b": "b1",
+            "minutes": 4
+          },
+          {
+            "a": "b1",
+            "b": "b2",
+            "minutes": 4
+          },
+          {
+            "a": "b2",
+            "b": "H_MAIN",
+            "minutes": 3
+          },
+          {
+            "a": "court",
+            "b": "c1",
+            "minutes": 5
+          },
+          {
+            "a": "c1",
+            "b": "H_TRAUMA",
+            "minutes": 6
+          },
+          {
+            "a": "walk",
+            "b": "w1",
+            "minutes": 5
+          },
+          {
+            "a": "w1",
+            "b": "H_GERI",
+            "minutes": 6
+          }
+        ]
+      }
+    },
+    {
+      "command_id": "cmd-plan-v2-approve",
+      "kind": "approve_plan",
+      "occurred_at": "2026-09-29T10:00:00+08:00",
+      "plan_id": "PLAN-20261010-v2",
+      "signer": {
+        "role": "SAFETY_DIRECTOR",
+        "name": "赛事安全负责人（虚构）"
+      }
+    },
+    {
+      "command_id": "cmd-heat-1",
+      "kind": "resource_notice",
+      "occurred_at": "2026-10-10T09:05:00+08:00",
+      "actor": {
+        "org": "host",
+        "name": "主办方气象联络（虚构）"
+      },
+      "notice": {
+        "notice_id": "notice-heat-riverside-0905",
+        "type": "HEAT",
+        "scope": {
+          "region": "riverside"
+        },
+        "window": [
+          "2026-10-10T09:00:00+08:00",
+          "2026-10-10T12:00:00+08:00"
+        ],
+        "detail": "橙色高温预警，滨江路段 32℃ 以上"
+      }
+    },
+    {
+      "command_id": "cmd-heat-1-dup",
+      "kind": "resource_notice",
+      "occurred_at": "2026-10-10T09:06:00+08:00",
+      "actor": {
+        "org": "host",
+        "name": "主办方气象联络（虚构）"
+      },
+      "notice": {
+        "notice_id": "notice-heat-riverside-0905",
+        "type": "HEAT",
+        "scope": {
+          "region": "riverside"
+        },
+        "window": [
+          "2026-10-10T09:00:00+08:00",
+          "2026-10-10T12:00:00+08:00"
+        ],
+        "detail": "同一条高温预警被网关重复推送"
+      }
+    },
+    {
+      "command_id": "cmd-aed4-fault",
+      "kind": "resource_notice",
+      "occurred_at": "2026-10-10T09:10:00+08:00",
+      "actor": {
+        "org": "host",
+        "name": "主办方器材组（虚构）"
+      },
+      "notice": {
+        "notice_id": "notice-aed4-fault-0910",
+        "type": "EQUIPMENT_FAULT",
+        "resource_id": "A4",
+        "window": [
+          "2026-10-10T09:10:00+08:00",
+          "2026-10-10T10:30:00+08:00"
+        ],
+        "detail": "健步起点 AED 自检失败，电池仓故障"
+      }
+    },
+    {
+      "command_id": "cmd-cert-emt1",
+      "kind": "resource_notice",
+      "occurred_at": "2026-10-10T09:20:00+08:00",
+      "actor": {
+        "org": "station",
+        "name": "急救站资质管理员（虚构）"
+      },
+      "notice": {
+        "notice_id": "notice-cert-emt1-0920",
+        "type": "CERT_EXPIRY",
+        "resource_id": "T_EMT1",
+        "member_patch": {
+          "member_id": "m-e1a",
+          "expires_at": "2026-10-09T00:00:00+08:00"
+        },
+        "window": [
+          "2026-10-10T09:20:00+08:00",
+          "2026-10-10T12:00:00+08:00"
+        ],
+        "detail": "10 公里组组长急救员证照昨日到期"
+      }
+    },
+    {
+      "command_id": "cmd-route-run-close",
+      "kind": "resource_notice",
+      "occurred_at": "2026-10-10T09:30:00+08:00",
+      "actor": {
+        "org": "host",
+        "name": "主办方路线组（虚构）"
+      },
+      "notice": {
+        "notice_id": "notice-route-run-0930",
+        "type": "ROUTE_CHANGE",
+        "resource_id": "R_RUN",
+        "closed_windows": [
+          [
+            "2026-10-10T09:30:00+08:00",
+            "2026-10-10T10:30:00+08:00"
+          ]
+        ],
+        "window": [
+          "2026-10-10T09:30:00+08:00",
+          "2026-10-10T10:30:00+08:00"
+        ],
+        "detail": "滨江路 j2 段临时交通管制，启用环城桥备用线"
+      }
+    },
+    {
+      "command_id": "cmd-inc-run-1000",
+      "kind": "report_incident",
+      "occurred_at": "2026-10-10T10:00:00+08:00",
+      "actor": {
+        "org": "station",
+        "name": "5 公里点医生（虚构）"
+      },
+      "incident": {
+        "incident_id": "INC-1001",
+        "post_id": "P_RUN_5K",
+        "injury": "CARDIAC",
+        "severity": "CRITICAL",
+        "location_ref": "run5k"
+      }
+    },
+    {
+      "command_id": "cmd-inc-ball-1000",
+      "kind": "report_incident",
+      "occurred_at": "2026-10-10T10:00:00+08:00",
+      "actor": {
+        "org": "volunteer",
+        "name": "球场边救护员（虚构）"
+      },
+      "incident": {
+        "incident_id": "INC-1002",
+        "post_id": "P_BALL",
+        "injury": "TRAUMA",
+        "severity": "HIGH",
+        "location_ref": "court"
+      }
+    },
+    {
+      "command_id": "cmd-inc-walk-1000",
+      "kind": "report_incident",
+      "occurred_at": "2026-10-10T10:00:00+08:00",
+      "actor": {
+        "org": "volunteer",
+        "name": "健步起点救护员（虚构）"
+      },
+      "incident": {
+        "incident_id": "INC-1003",
+        "post_id": "P_WALK",
+        "injury": "SENIOR_FALL",
+        "severity": "HIGH",
+        "location_ref": "walk"
+      }
+    },
+    {
+      "command_id": "cmd-handoff-walk",
+      "kind": "complete_handoff",
+      "occurred_at": "2026-10-10T10:14:00+08:00",
+      "actor": {
+        "org": "hospital",
+        "name": "老年医院急诊接诊台（虚构）"
+      },
+      "incident_id": "INC-1003",
+      "facility_id": "H_GERI",
+      "arrived_at": "2026-10-10T10:14:00+08:00",
+      "phi_ref": "phi-walk-1003"
+    },
+    {
+      "command_id": "cmd-handoff-walk-dup",
+      "kind": "complete_handoff",
+      "occurred_at": "2026-10-10T10:15:00+08:00",
+      "actor": {
+        "org": "hospital",
+        "name": "老年医院急诊接诊台（虚构）"
+      },
+      "incident_id": "INC-1003",
+      "facility_id": "H_GERI",
+      "arrived_at": "2026-10-10T10:14:00+08:00",
+      "phi_ref": "phi-walk-1003"
+    },
+    {
+      "command_id": "cmd-phi-walk-1",
+      "kind": "record_phi",
+      "occurred_at": "2026-10-10T10:18:00+08:00",
+      "actor": {
+        "org": "hospital",
+        "name": "老年医院急诊（虚构）"
+      },
+      "phi": {
+        "phi_id": "phi-walk-1003",
+        "incident_id": "INC-1003",
+        "content": {
+          "synthetic": true,
+          "note": "虚构伤情摘要：疑似髋部骨折，既往高血压病史（演练用，非真实个人资料）"
+        }
+      }
+    },
+    {
+      "command_id": "cmd-handoff-run",
+      "kind": "complete_handoff",
+      "occurred_at": "2026-10-10T10:19:00+08:00",
+      "actor": {
+        "org": "hospital",
+        "name": "市一医院胸痛中心（虚构）"
+      },
+      "incident_id": "INC-1001",
+      "facility_id": "H_MAIN",
+      "arrived_at": "2026-10-10T10:19:00+08:00",
+      "phi_ref": null
+    },
+    {
+      "command_id": "cmd-handoff-ball",
+      "kind": "complete_handoff",
+      "occurred_at": "2026-10-10T10:21:00+08:00",
+      "actor": {
+        "org": "hospital",
+        "name": "创伤骨科医院急诊（虚构）"
+      },
+      "incident_id": "INC-1002",
+      "facility_id": "H_TRAUMA",
+      "arrived_at": "2026-10-10T10:21:00+08:00",
+      "phi_ref": null
+    }
+  ]
+}
